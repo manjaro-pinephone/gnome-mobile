@@ -38,7 +38,7 @@ jobs:
       matrix:
         DEVICE: [pinephone, pinephonepro]
         EDITION: [gnome-mobile]
-        BRANCH: [unstable]
+        BRANCH: [stable]
     steps:
       - 
         uses: styfle/cancel-workflow-action@0.11.0
