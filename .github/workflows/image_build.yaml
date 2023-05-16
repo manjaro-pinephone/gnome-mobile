@@ -14,7 +14,7 @@ jobs:
           access_token: ${{ github.token }}
       - 
         id: time
-        uses: nanzm/get-time-action@v1.1
+        uses: boredland/get-time-action@2.0.0
         with:
           format: 'YYYYMMDDHHmm'
       - 
@@ -46,7 +46,7 @@ jobs:
           access_token: ${{ github.token }}
       - 
         id: time
-        uses: nanzm/get-time-action@v1.1
+        uses: boredland/get-time-action@2.0.0
         with:
           format: 'YYYYMMDD'
       - 
@@ -78,8 +78,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.prepare_release.outputs.upload_url }}
-          asset_path: ./${{ env.FILE_SHA1 }}
-          asset_name: ${{ env.FILE_SHA1 }}
+          asset_path: ./${{ env.FILE_SHA256 }}
+          asset_name: ${{ env.FILE_SHA256 }}
           asset_content_type: text/plain
       - 
         id: upload_pkg
